@@ -4,9 +4,11 @@
 <head>
     <title>Product Landing Page</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Product Landing Page">
     <meta name="description" content="Product Landing Page">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -17,12 +19,29 @@
             </div>
 
             <nav id="nav-bar">
+                <section class="nav-bar-elem">
                 <ul>
                     <li><a class="nav-link" href="#features">Features</a></li>
                     <li><a class="nav-link" href="#how-it-works">How it Works</a></li>
                     <li><a class="nav-link" href="#pricing">Pricing</a></li>
                 </ul>
+            </section>
+                <section class="hamburger">
+                    <div class="menu-icon" id="menu-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </section>
+            <section class="navbar-content">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#features">Inicio</a></li>
+                    <li><a href="#how-it-works">Acerca de</a></li>
+                    <li><a href="#pricing">Servicios</a></li>
+                </ul>
+            </section>
             </nav>
+            
         </header>
     </div>
     <div class="container"></div>
@@ -114,6 +133,7 @@
         </footer>
     </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

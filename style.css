@@ -11,6 +11,8 @@
 body {
   background-color: #eee;
   font-family: 'Lato', sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 #page-wrapper {
@@ -63,10 +65,11 @@ a {
 header {
   position: fixed;
   top: 0;
+  width: 100vw;
   min-height: 75px;
-  padding: 0px 20px;
+  padding: 0px 20px 0px 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #eee;
 }
@@ -87,14 +90,13 @@ header {
   margin-left: 15px;
 }
 
-
 nav {
   /*
   ...cambia aquí...
   */
 }
 
-nav > ul {
+.nav-bar-elem > ul {
   width: 35vw;
   display: flex;
   flex-direction: row;
@@ -270,4 +272,74 @@ footer > span {
   justify-content: flex-end;
   font-size: 0.9em;
   color: #444;
+}
+
+
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  color: black;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Estilos para el ícono del menú hamburguesa */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 4px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #635c5ce3;
+  }
+
+  .nav-links a{
+    color: white;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+
+  .nav-bar-elem{
+    display: none;
+  }
+
+  .navbar-content li{ 
+  width: 100vw;
+  text-align: center;
+  padding: 10px;
+} 
 }
